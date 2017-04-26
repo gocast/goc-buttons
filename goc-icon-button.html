@@ -1,0 +1,83 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../goc-styles/goc-styles.html">
+<link rel="import" href="../touch-item/touch-item.html">
+<link rel="import" href="../goc-icons/goc-icons.html">
+
+<dom-module id="goc-icon-button">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+      }
+
+      button {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        height: 40px;
+        outline: 0;
+        padding: 0;
+        width: 40px;        
+      }
+
+      touch-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: var(--paper-grey-700);
+        height: 100%;
+        width: 100%;
+      }
+
+      touch-item[mouse-over] {
+        background: rgba(0, 0, 0, 0.06);
+      }
+
+      :host([theme="primary"]) touch-item {
+        color: var(--goc-primary-color);
+      }
+
+      :host([disabled]) {
+        pointer-events: none;
+      }
+
+      :host([disabled]) touch-item {
+        color: var(--paper-grey-500);
+      }
+		</style>
+
+    <button>
+			<touch-item>
+        <iron-icon icon="[[icon]]"></iron-icon>
+			</touch-item>
+    </button>
+
+  </template>
+
+  <script>
+
+    class GocIconButton extends Polymer.Element {
+
+      static get is() {return 'goc-icon-button';}
+
+      static get properties() {
+        return {
+
+          icon: String,
+
+					theme: {
+						type: String,
+						reflectToAttribute: true 
+					}
+
+        };
+      }
+
+    }
+
+    customElements.define(GocIconButton.is, GocIconButton);
+
+  </script>
+</dom-module>

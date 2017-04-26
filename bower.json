@@ -1,0 +1,19 @@
+{
+  "name": "goc-buttons",
+  "main": "goc-buttons.html",
+  "dependencies": {
+    "goc-icons": "git@github.com:gocast/goc-icons.git",
+    "goc-styles": "git@github.com:gocast/goc-styles.git#^0.1.0",
+    "polymer": "Polymer/polymer#^2.0.0-rc.7",
+    "touch-item": "git@github.com:sharedlabs/touch-item.git#^0.1.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
+    "web-component-tester": "^6.0.0-prerelease.5",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.5"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0-rc.2",
+    "webcomponentsjs": "^v1.0.0-rc.5"
+  }
+}
